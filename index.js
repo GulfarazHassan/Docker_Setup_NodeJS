@@ -27,7 +27,7 @@ const port = process.env.PORT || 3000;
 const mongoURL = `mongodb://${MONGO_USER}:${MONGO_PASSWORD}@${MONGO_IP}:${MONGO_PORT}/?authSource=admin`;
 
 const retryConnect = () => {
-    mongoose.connect(mongoURL)
+    mongoose.connect(mongoURL, { useNewUrlParser: true })
         .then(() => console.log("Successfully connected"))
         .catch(e => {
             console.log("error :: ", e);
