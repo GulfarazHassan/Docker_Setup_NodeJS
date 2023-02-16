@@ -49,7 +49,7 @@ app.use(session({
 app.set('trust proxy')
 app.get("/api/v1", (req, res) => {
     console.log('yah it ran')
-    res.send(`<h2>Hello12 321 ${process.env.NODE_ENV}</h2>`)
+    res.send(`<h2>Hello12 321 updated ${process.env.NODE_ENV}</h2>`)
 })
 
 app.use('/api/v1/posts', postRoutes);
